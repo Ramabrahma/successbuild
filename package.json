@@ -1,0 +1,26 @@
+{
+  "name": "gmail-mailbox-hub",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "make-index": "node -e \"require('fs').writeFileSync('index.html','<div id=\\\"root\\\"></div><script type=\\\"module\\\" src=\\\"/src/React.jsx\\\"></script>')\"",
+    "dev": "npm run make-index && concurrently \"vite --port 5174 --strictPort\" \"node Server.js\"",
+    "build": "npm run make-index && vite build",
+    "start": "node Server.js"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "concurrently": "latest",
+    "cors": "latest",
+    "dotenv": "latest",
+    "express": "latest",
+    "express-session": "latest",
+    "googleapis": "latest",
+    "helmet": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "vite": "latest"
+  },
+  "devDependencies": {}
+}
